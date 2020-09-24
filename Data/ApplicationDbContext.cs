@@ -28,5 +28,36 @@ namespace capstone.Data
         {
 
         }
+
+        protected override void OnModelCreating(ModelBuilder builder) {
+            builder.Entity<Movie>()
+                .HasData(
+                    new Movie {
+                        Id = 1,
+                        MovieTitle = "Back to the Future",
+                        Genre = "Sci-fi/Adventure",
+                        ReleaseDate = new DateTime(1985, 7, 3),
+                        Watched = true,
+                        UserId = "86b6a5a5-2da1-4287-a6d6-478b0a7c6072"
+                    },
+                    new Movie {
+                        Id = 2,
+                        MovieTitle = "Back to the Future Part II",
+                        Genre = "Comedy/Sci-fi",
+                        ReleaseDate = new DateTime(1989, 11, 22),
+                        Watched = true,
+                        UserId = "86b6a5a5-2da1-4287-a6d6-478b0a7c6072"
+                    },
+                    new Movie {
+                        Id = 3,
+                        MovieTitle = "Back to the Future Part III",
+                        Genre = "Comedy/Western",
+                        ReleaseDate = new DateTime(1990, 5, 25),
+                        Watched = true,
+                        UserId = "86b6a5a5-2da1-4287-a6d6-478b0a7c6072"
+                    }
+                );
+            base.OnModelCreating(builder);
+        }
     }
 }
