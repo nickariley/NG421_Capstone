@@ -23,3 +23,20 @@
         </tr>
     </tbody>
 </table>
+
+<div class="row">
+    <div class="col-2"><label>Movie Title</label></div>
+    <div class="col-6"><input [(ngModel)]="newMovie.movieTitle" type="text" placeholder="Movie Title" class="smallInput"></div>
+</div>
+<div class="row">
+    <div class="col-2"><label>Genre</label></div>
+    <div class="col-6"><input [(ngModel)]="newMovie.genre" type="text" placeholder="Genre" class="smallInput"></div>
+</div>
+<div class="row">
+    <div class="col-2"><label>Release Date</label></div>
+    <div class="col-6"><input [(ngModel)]="newMovie.releaseDate" type="date" placeholder="ReleaseDate"></div>
+</div>
+<div class="row">
+    <div class="col-2"><label>Watched?</label></div>
+    <div class="col-6"><input [(ngModel)]="newMovie.watched" type="checkbox"></div>
+</div>
