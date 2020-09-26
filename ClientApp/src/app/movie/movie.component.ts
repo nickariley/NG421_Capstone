@@ -24,6 +24,7 @@ export class MovieComponent implements OnInit {
   }
 
   public async addMovie() {
-
+    const newMovie = await this.movieService.addMovie(this.newMovie);
+    this.movieList.push(newMovie);
   }
 }
