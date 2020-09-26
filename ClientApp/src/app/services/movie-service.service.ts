@@ -13,4 +13,8 @@ export class MovieServiceService {
     // why does this have to be the name of the controller? movie works but nothing else
     return this.httpClient.get<IMovie[]>(`${this.baseUrl}movie`).toPromise();
   }
+
+  public async addMovie(movie: IMovie): Promise<IMovie> {
+    return this.httpClient.post<IMovie>(`${this.baseUrl}movie`, movie).toPromise();
+  }
 }
