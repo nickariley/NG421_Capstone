@@ -35,7 +35,7 @@ namespace capstone.Controllers
         public Movie Post([FromBody]Movie movie)
         {
             movie.UserId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-            _context.Add(movie);
+            _context.Movies.Add(movie);
             _context.SaveChanges();
 
             return movie;
