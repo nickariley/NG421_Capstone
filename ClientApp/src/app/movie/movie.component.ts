@@ -23,4 +23,7 @@ export class MovieComponent implements OnInit {
     this.movieList = await this.movieService.getMovies();
   }
 
+  public async addMovie() {
+
+  }
 }
