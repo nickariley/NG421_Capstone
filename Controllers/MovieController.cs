@@ -30,5 +30,15 @@ namespace capstone.Controllers
 
             return _context.Movies.Where(m => m.UserId == userId);
         }
+
+        [HttpPost]
+        public Movie Post([FromBody]Movie movie)
+        {
+            movie.UserId = HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            _context.Add(movie);
+            _context.SaveChanges();
+
+            return movie;
+        }
     }
 }
